@@ -1,6 +1,8 @@
 import React from 'react';
 
 import classes from './Movie.module.css';
+import Button from 'react-bootstrap/Button';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
 const Movie = (props) => {
   return (
@@ -8,6 +10,7 @@ const Movie = (props) => {
       <h2>{props.title}</h2>
       <h3>{props.releaseDate}</h3>
       <p>{props.openingText}</p>
+      <button onClick={()=>props.deletingMovie(props.movieId)}>Delete Movie</button>
     </li>
   );
 };
